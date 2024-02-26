@@ -1,8 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
-        // !! Lambda syntax: (arguments) -> Expression
-
         // uses the ConsolePrinter class as an Argument
         Print(new ConsolePrinter());
         Print(new ConsolePrinter2());
@@ -14,6 +11,14 @@ public class Main {
                 System.out.println("This is a Anonymous Inner Class "+message);
             }
         });
+
+        // !! Lambda syntax: (arguments) -> Expression
+        // lambda Expression
+        Print(message -> System.out.println(message)); // Hello World
+
+        // assigning the Lambda expression in a variable
+        SampleInterface InterfaceVariable = message -> System.out.println(message);
+        InterfaceVariable.ConsoleMessage("Kamote");
 
     }
 
